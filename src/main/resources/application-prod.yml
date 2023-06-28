@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: mall
+    password: Wang789
+    url: jdbc:mysql://10.0.4.9:3306/mall?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+  rabbitmq:
+    addresses: 49.234.11.212
+    port: 5672
+    username: guest
+    password: guest
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mappers/*.xml
+
+logging:
+  pattern:
+    console: "[%thread] %-5lever %logger{36} - %msg%n"
+wx:
+  appId: wx3e6b9f1c5a7ff034
+  mchId: 1614433647
+  mchKey: Aa111111111122222222223333333333
+  notifyUrl: http://49.234.11.212/pay/notify
+  returnUrl: http://49.234.11.212/#/order/list
+#alipay:
+#  appId:
+#  privateKey:
+#  aliPayPublicKey:
+#  notifyUrl: "http://49.234.11.212/pay/notify"
+#  returnUrl: http://49.234.11.212/#/order/list
